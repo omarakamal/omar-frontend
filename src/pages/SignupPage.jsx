@@ -28,7 +28,7 @@ function SignupPage(props) {
         name:name
     }
 
-    axios.post('http://localhost:5005/auth/signup',newUser)
+    axios.post(`${import.meta.env.VITE_API_URL}/auth/signup`,newUser)
     .then((createdUser)=>{
         navigate('/login')
         console.log(createdUser)
